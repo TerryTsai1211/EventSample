@@ -18,7 +18,7 @@ namespace DataChangeEvent
 
         #region Step3-2 使用 Action Event 寫法
 
-        // public event Action<object , DataChangeEventHandler> DataChange;
+        // public event Action<object , DataChangeEventArgs> DataChange;
 
         #endregion
 

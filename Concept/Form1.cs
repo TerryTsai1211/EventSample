@@ -40,9 +40,9 @@ namespace Concept
         {
             // why：為什麼不能直接 Invoke button2.Click 事件，但是 DemoEvent 可以
 
-            //button2.Click?.Invoke(this , new EventArgs);
+            //button2.Click?.Invoke(this , new EventArgs());
 
-            DemoEvent?.Invoke(this, new EventArgs);
+            DemoEvent?.Invoke(this, new EventArgs());
         } 
         #endregion
 
