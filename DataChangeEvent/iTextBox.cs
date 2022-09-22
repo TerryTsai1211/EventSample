@@ -39,9 +39,7 @@ namespace DataChangeEvent
                 return;
 
             // 紀錄新舊值
-            DataChangeEventArgs args = new DataChangeEventArgs();
-            args.OldValue = _oldValue;
-            args.NewValue = Text;
+            DataChangeEventArgs args = new DataChangeEventArgs(_oldValue, Text);
 
             // 紀錄先舊值後，把新值設定為舊值
             _oldValue = Text;
@@ -66,5 +64,11 @@ namespace DataChangeEvent
     {
         public string OldValue { get; set; }
         public string NewValue { get; set; }
+
+        public DataChangeEventArgs(string oldValue, string newValue)
+        {
+            OldValue = oldValue;
+            NewValue = newValue;
+        }
     }
 }
