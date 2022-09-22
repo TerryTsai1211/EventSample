@@ -62,13 +62,16 @@ namespace DataChangeEvent
     // Step1：建立 DataChangeEventArgs EventArgs，並宣告兩個 Property
     public class DataChangeEventArgs : EventArgs
     {
-        public string OldValue { get; set; }
-        public string NewValue { get; set; }
+        private string _oldValue;
+        public string OldValue { get => _oldValue;}
+
+        private string _newValue;
+        public string NewValue { get => _newValue;}
 
         public DataChangeEventArgs(string oldValue, string newValue)
         {
-            OldValue = oldValue;
-            NewValue = newValue;
+            _oldValue = oldValue;
+            _newValue = newValue;
         }
     }
 }
